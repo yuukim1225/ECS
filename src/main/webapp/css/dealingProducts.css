@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 230px;
+}
+.wrapper > div {
+    border-radius: 5px;
+    background: rgb(207,232,220);
+    border: 2px solid rgb(79,185,227);
+    padding: 1em;
+}
+
+.txt-limit {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
