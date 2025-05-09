@@ -26,27 +26,5 @@
 
     <build>
 	    <finalName>ECS3</finalName>
-    <plugins>
-	    <plugin>
-        	<artifactId>maven-compiler-plugin</artifactId>
-        	<version>3.8.1</version>
-        	<configration>
-          		<target>${java.version}</target>
-          		<source>${java.version}</source>
-        	</configration>
-      　　　　</plugin>
-      <plugin>
-		<artifactId>maven-war-plugin</artifactId>
-        	<version>3.2.3</version>
-        	<configration>
-          		<warSourceDirectory>FrontendContents</warSourceDirectory>
-          		<archive>
-				<manifest>
-					<addClasspath>true</addClasspath>
-				</manifest>
-          		</archive>
-        	</configration>
-      </plugin>
-    </plugins>
     </build>
 </project>
