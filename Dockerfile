@@ -2,6 +2,6 @@ FROM maven:3-eclipse-temurin-17 AS build
 COPY . .
 RUN mvn clean package -Dmaven.test.skip=true
 FROM eclipse-temurin:17-alpine
-COPY /target/maven-test-0.1.0-shaded.war maven-test-0.1.0-shaded.war
+COPY --from=build /target/maven-test-0.1.0-shaded.jar maven-test-0.1.0-shaded.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "maven-test-0.1.0-shaded.war"]
+ENTRYPOINT ["java", "-jar", "maven-test-0.1.0-shaded.jar"]
