@@ -3,10 +3,11 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-v4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.springframework</groupId>
-    <artifactId>maven-test</artifactId>
-    <packaging>jar</packaging>
+    <groupId>ECS1</groupId>
+    <artifactId>ECS2</artifactId>
+    <packaging>war</packaging>
     <version>0.1.0</version>
+    <name>test</name>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -24,28 +25,6 @@
 	</dependencies>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <transformers>
-                                <transformer
-                                    implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>hello.HelloWorld</mainClass>
-                                </transformer>
-                            </transformers>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
+	    <finalName>ECS3</finalName>
     </build>
 </project>
